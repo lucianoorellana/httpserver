@@ -1,0 +1,14 @@
+int valid_filename(char *filename);
+void ok(int fd, const char *message, int close);
+void ok_send_payload(int fd, int length);
+void bad_request(int fd, const char *message);
+void created(int fd, const char *message);
+void bad_request(int fd, const char *message);
+void not_found(int fd, const char *message);
+void forbidden(int fd, const char *message);
+void internal_server_error(int fd, const char *message);
+void get(int fd, char *resource);
+void put(int fd, char *resource, int content_length);
+int log(const char method[4], char resource[28], int content_length);
+int write_hex_to_log(int bytes_read, int total_bytes_read, int offset, char *content);
+void log_error(const char method[4], char *resource, int code);
